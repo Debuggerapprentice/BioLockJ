@@ -107,21 +107,30 @@ public class ConfigReader
 		String val = obj.toString();
 			
 		// allow statements like thisDir = $someOtherDir to avoid re-typing paths
-		if( val.startsWith("$"))
+
+		if( val.startsWith("${"))
 		{
+			String[] strSplit = val.replace("${","").split("}");
+			obj = props.getProperty(strSplit[0]);
+			val = obj.toString().concat(strSplit[1]);
+			int i = 5;
+		}
+
+		else if( val.startsWith("$"))
+		{
+
 			obj = props.getProperty(val.substring(1));
 			
 			if( obj == null)
 				return null;
 			
 			val = obj.toString();
-			
+			int i =5;
 		}
 		
 		return val;
 	}
-	
-	
+
 	public ConfigReader(File propertiesFile) throws Exception
 	{
 		this.propertiesFile = propertiesFile;
@@ -131,3 +140,5 @@ public class ConfigReader
 		in.close();
 	}
 }
+
+
