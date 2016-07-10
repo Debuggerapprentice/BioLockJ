@@ -7,7 +7,7 @@
 # this properties file maps reference genome 11 to the CARDS database
 # and dumps out a gtf file suitable for visualizaiton in a tool such 
 # as the Integrated Genome Browser
-# Note, Fix Blast Query Directory dollar sign!
+# MZ Note: Fix Blast Query Directory dollar sign!
 
 #Define main directory and project directory
 # MAIN_DIR = /Users/malcolm/Documents/afodor_research/mjzapata
@@ -16,8 +16,8 @@ PROJECT_DIR = /nobackup/afodor_research/mjzapata/bioLockJProjects/resistantAnnot
 
 # these are for all BLAST jobs (formatting and searching)
 BLAST_PRELIMINARY_STRING = module load blast
-# BLAST_BINARY_DIR=/apps/pkg/ncbi-blast-2.2.29+/rhel6_u5-x86_64/gnu/bin/
-BLAST_BINARY_DIR=/Applications/Bioinformatics/mothur/blast/bin/
+# BLAST_BINARY_DIR=/Applications/Bioinformatics/mothur/blast/bin/
+BLAST_BINARY_DIR=/apps/pkg/ncbi-blast-2.2.29+/rhel6_u5-x86_64/gnu/bin/
 
 # executed before running script files on the cluster
 CHMOD_STRING = chmod 744
@@ -56,6 +56,6 @@ BLAST_DB_TYPE=nucl
 BLAST_ALL_COMMAND=blastn
 
 
-OUTPUT_QUERY_COORDINATES_TO_GTF=FALSE
+OUTPUT_QUERY_COORDINATES_TO_GTF=TRUE
 
 # ran homologySearch.BreakUpFastaSequence log to /Users/malcolm/JavaProjects/log_FindCRE_Resistance.BioLockJProperties_1468111577433 Sat Jul 09 20:46:28 EDT 2016
