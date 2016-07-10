@@ -56,6 +56,6 @@ BLAST_DB_TYPE=nucl
 BLAST_ALL_COMMAND=blastn
 
 
-OUTPUT_QUERY_COORDINATES_TO_GTF=TRUE
+OUTPUT_QUERY_COORDINATES_TO_GTF=FALSE
 
 # ran homologySearch.BreakUpFastaSequence log to /Users/malcolm/JavaProjects/log_FindCRE_Resistance.BioLockJProperties_1468111577433 Sat Jul 09 20:46:28 EDT 2016
