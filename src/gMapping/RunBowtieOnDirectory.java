@@ -1,4 +1,4 @@
-package SRATools;
+package gMapping;
 
 import java.io.BufferedWriter;
 import java.io.File;
