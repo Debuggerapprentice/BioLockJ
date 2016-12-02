@@ -11,9 +11,7 @@ import bioLockJ.BioLockJExecutor;
 import bioLockJ.BioLockJUtils;
 import utils.ConfigReader;
 
-/*
- * for now, just uses the default kmer size of 31
- */
+
 public class RunBowtieOnDirectory extends BioLockJExecutor
 {
     private File runAllFile = null;
