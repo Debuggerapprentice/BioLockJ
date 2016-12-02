@@ -1,0 +1,53 @@
+#RUN_BIOLOCK_J SRATools.FASTQDUMPFromSRRList
+##RUN_BIOLOCK_J gMapping.RunBowtieOnDirectory.java
+##RUN_BIOLOCK_J gMapping.BAM2BCF.java
+##RUN_BIOLOCK_J gMapping.GzipAllVCF.java
+##RUN_BIOLOCK_J gMapping.MergeAllVCF.java
+
+# executed before running script files on the cluster
+CHMOD_STRING = chmod 744
+
+# these are set for our UNCC cluster
+CLUSTER_BATCH_COMMAND = qsub -q "copperhead_batch"
+NUMBER_CLUSTERS=100
+
+# in seconds - how long to wait before checking to see if queued jobs have finished
+POLL_TIME = 10
+
+PROJECT_DIRECTORY= /nobackup/afodor_research/James_Dec_2016;
+PROGRAM_DIRECTORY = /nobackup/afodor_research/commonlib;
+FASTQ_DIRECTORY = ${PROJECT_DIRECTORY}/fastqdump/;
+REF_GENOME_DIRECTORY = ${PROGRAM_DIRECTORY}/bowtie2-2.2.9/Kleb_Pneu/;
+REF_SEQUENCE = ${PROJECT_DIRECTORY}/WG_Reference.fasta;
+SRR_LIST = ${PROJECT_DIRECTORY}/ALL_SRR_LIST.txt;
+
+SRA_BINARY_DIRECTORY = ${PROGRAM_DIRECTORY}/sratoolkit.2.8.0-ubuntu64/;
+BAM_SORTED_DIRECTORY = ${PROJECT_DIRECTORY}/bamsorted/;
+SCRIPTS_DIRECTORY = ${PROJECT_DIRECTORY}/scripts/;
+BOWTIE2_BINARY = ${PROGRAM_DIRECTORY}/bowtie2-2.2.9/;
+SAMTOOLS_BINARY = ${PROGRAM_DIRECTORY}/samtools1.3.1/;
+BCF_DIRECTORY = ${PROJECT_DIRECTORY}/bcf/;
+VCF_DIRECTORY = ${PROJECT_DIRECTORY}/vcf/;
+BCFTOOLS_DIRECTORY = ${PROGRAM_DIRECTORY}/bcftools-1.3.1/;
+HTSLIB_DIRECTORY = ${PROGRAM_DIRECTORY}/htslib-1.3.1/;
+VCF_MERGED_DIRECTORY = ${PROJECT_DIRECTORY}/vcfmerged/;
+
+# will be passed to JVM as -Xms20g not currently implemented
+#JAVA_VM_ARGS=-Xms20g
+
+GENOME_TO_INTEGER_FILE=/nobackup/afodor_research/bioLockJProjects/resistantAnnotation/pneuKmerCode.txt
+KMER_TO_HAS_GENOME_FILE=/nobackup/afodor_research/bioLockJProjects/resistantAnnotation/kmersToGenome.txt
+
+STRAIN_METADATA_FILE=/nobackup/afodor_research/af_broad/strainMeta.txt
+
+FISHER_CONDITION_1=resistant
+FISHER_CONDITION_2=susceptible
+FISHER_PVALUES_OUTPUT_FILE=/nobackup/afodor_research/bioLockJProjects/resistantAnnotation/resistantVsSuc_kneu.txt
+
+FISHER_GTF_OUTPUT_FILE=/nobackup/afodor_research/bioLockJProjects/resistantAnnotation/resistantVsSuc_To11.gwas
+REFERENCE_GENOME=/nobackup/afodor_research/bioLockJProjects/resistantAnnotation/refGenome/klebsiella_pneumoniae_chs_11.0.scaffolds.fasta
+GC_CONTENT_IGV_OUTPUT_FILE=/nobackup/afodor_research/bioLockJProjects/resistantAnnotation/genome11_gc.igv
+GC_CONTENT_WINDOW_SIZE=500
+GC_CONTENT_STEP_SIZE=100
+
+CONSERVED_KMER_FOR_REFERENCE_OUPUT_FILE=/nobackup/afodor_research/bioLockJProjects/resistantAnnotation/conservedKmer.igv
