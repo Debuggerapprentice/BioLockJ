@@ -8,7 +8,7 @@
 * This program is distributed in the hope that it will be useful,
 * but WITHOUT ANY WARRANTY; without even the implied warranty of
 * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-* GNU General Public License for more details at http://www.gnu.org * * */
+* GNU General Public License for more details at http://www.gnu.org * * **/
 
 
 package utils;
@@ -52,7 +52,24 @@ public class ConfigReader
 	public static final String JAVA_VM_ARGS= "JAVA_VM_ARGS"; 
 	public static final String GENOME_TO_INTEGER_FILE = "GENOME_TO_INTEGER_FILE";
 	public static final String KMER_TO_HAS_GENOME_FILE = "KMER_TO_HAS_GENOME_FILE";
-	
+
+	public static final String SRR_LIST = "SRR_LIST";
+	public static final String SRA_BINARY_DIRECTORY = "SRA_BINARY_DIRECTORY";
+	public static final String PROJECT_DIRECTORY ="PROJECt_DIRECTORY";
+	public static final String PROGRAM_DIRECTORY ="PROGRAM_DIRECTORY";
+	public static final String FASTQ_DIRECTORY = "FASTQ_DIRECTORY";
+	public static final String REF_GENOME_DIRECTORY = "REF_GENOME_DIRECTORY";
+	public static final String BAM_SORTED_DIRECTORY = "BAM_SORTED_DIRECTORY";
+	public static final String SCRIPTS_DIRECTORY = "SCRIPTS_DIRECTORY";
+	public static final String BOWTIE2_BINARY = "BOWTIE2_BINARY";
+	public static final String SAMTOOLS_BINARY = "SAMTOOLS_BINARY";
+	public static final String REF_SEQUENCE = "REF_SEQUENCE";
+	public static final String BCF_DIRECTORY = "BCF_DIRECTORY";
+	public static final String VCF_DIRECTORY = "VCF_DIRECTORY";
+	public static final String BCFTOOLS_DIRECTORY = "BCFTOOLS_DIRECTORY";
+	public static final String HTSLIB_DIRECTORY = "HTSLIB_DIRECTORY";
+	public static final String VCF_MERGED_DIRECTORY = "VCF_MERGED_DIRECTORY";
+
 	public static final String DSK_INPUT_DIRECTORY = "DSK_INPUT_DIRECTORY";
 	public static final String DSK_OUTPUT_DIRECTORY = "DSK_OUTPUT_DIRECTORY";
 	public static final String DSK_BINARY_DIRECTORY = "DSK_BINARY_DIRECTORY";
