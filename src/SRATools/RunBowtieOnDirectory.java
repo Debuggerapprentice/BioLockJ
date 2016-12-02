@@ -14,7 +14,7 @@ import utils.ConfigReader;
 /*
  * for now, just uses the default kmer size of 31
  */
-public class FASTQDumpFromSRRList extends BioLockJExecutor
+public class RunBowtieOnDirectory extends BioLockJExecutor
 {
     private File runAllFile = null;
     private List<File> scripts = null;
