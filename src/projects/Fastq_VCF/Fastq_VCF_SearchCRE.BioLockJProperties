@@ -1,5 +1,5 @@
-#RUN_BIOLOCK_J SRATools.FASTQDUMPFromSRRList
-##RUN_BIOLOCK_J gMapping.RunBowtieOnDirectory.java
+##RUN_BIOLOCK_J SRATools.FASTQDUMPFromSRRList
+#RUN_BIOLOCK_J gMapping.RunBowtieOnDirectory.java
 ##RUN_BIOLOCK_J gMapping.BAM2BCF.java
 ##RUN_BIOLOCK_J gMapping.GzipAllVCF.java
 ##RUN_BIOLOCK_J gMapping.MergeAllVCF.java
