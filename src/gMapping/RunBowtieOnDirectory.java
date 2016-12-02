@@ -90,7 +90,7 @@ public class RunBowtieOnDirectory extends BioLockJExecutor
                 if( touchFile.exists())
                     touchFile.delete();
 
-                writer.write("touch " + touchFile.getAbsolutePath() + "\n");
+                //writer.write("touch " + touchFile.getAbsolutePath() + "\n");
 
                 writer.flush();  writer.close();
                 this.scripts.add(script);
