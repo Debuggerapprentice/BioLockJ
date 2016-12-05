@@ -80,10 +80,12 @@ public class RunBowtieOnDirectory extends BioLockJExecutor
 
                 File outFile = new File( bamSortedDir+ File.separator + fastqFile.getName() + "_sorted.bam");
 
+
+
                 writer.write(bowtie2Path + "bowtie2 -x " + refDir + " -1 " +
                         fastqFile.getAbsolutePath() + " -2 " + fastqFile.getAbsolutePath().replace("_1.fastq","_2.fastq") +
-                        " | " + samtoolsPath + "samtools view -bS - | " + samtoolsPath + "samtools sort - " + outFile.getAbsolutePath()
-                );
+                        " | " + samtoolsPath + "samtools view -bS - | " + samtoolsPath + "samtools sort -o  " + outFile.getAbsolutePath()
+                        + " - ");
 
                 File touchFile = new File(script.getAbsolutePath() + FINISHED_SUFFIX );
 
