@@ -69,6 +69,7 @@ public class ConfigReader
 	public static final String BCFTOOLS_DIRECTORY = "BCFTOOLS_DIRECTORY";
 	public static final String HTSLIB_DIRECTORY = "HTSLIB_DIRECTORY";
 	public static final String VCF_MERGED_DIRECTORY = "VCF_MERGED_DIRECTORY";
+	public static final String VCF_GZIP_DIRECTORY = "VCF_GZIP_DIRECTORY";
 
 	public static final String DSK_INPUT_DIRECTORY = "DSK_INPUT_DIRECTORY";
 	public static final String DSK_OUTPUT_DIRECTORY = "DSK_OUTPUT_DIRECTORY";
