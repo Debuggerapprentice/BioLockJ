@@ -34,8 +34,8 @@ public class RunBowtieOnDirectory extends BioLockJExecutor
     {
         BioLockJUtils.requireString(cReader, ConfigReader.FASTQ_DIRECTORY);
         BioLockJUtils.requireString(cReader, ConfigReader.CLUSTER_BATCH_COMMAND);
-        BioLockJUtils.requireString(cReader, ConfigReader.BOWTIE2_BINARY);
-        BioLockJUtils.requireString(cReader, ConfigReader.SAMTOOLS_BINARY);
+        BioLockJUtils.requireString(cReader, ConfigReader.BOWTIE2_DIRECTORY);
+        BioLockJUtils.requireString(cReader, ConfigReader.SAMTOOLS_DIRECTORY);
         BioLockJUtils.requireString(cReader, ConfigReader.SCRIPTS_DIRECTORY);
         BioLockJUtils.requireString(cReader, ConfigReader.BAM_SORTED_DIRECTORY);
         BioLockJUtils.requireString(cReader, ConfigReader.REF_GENOME_DIRECTORY);
@@ -46,8 +46,8 @@ public class RunBowtieOnDirectory extends BioLockJExecutor
     {
         this.scripts = new ArrayList<File>();
         String sraBinaryPath = BioLockJUtils.requireString(cReader, ConfigReader.SRA_BINARY_DIRECTORY);
-        String bowtie2Path = BioLockJUtils.requireString(cReader, ConfigReader.BOWTIE2_BINARY);
-        String samtoolsPath = BioLockJUtils.requireString(cReader, ConfigReader.SAMTOOLS_BINARY);
+        String bowtie2Path = BioLockJUtils.requireString(cReader, ConfigReader.BOWTIE2_DIRECTORY);
+        String samtoolsPath = BioLockJUtils.requireString(cReader, ConfigReader.SAMTOOLS_DIRECTORY);
         String clusterBatchCommand = BioLockJUtils.requireString(cReader, ConfigReader.CLUSTER_BATCH_COMMAND);
         File bamSortedDir = BioLockJUtils.requireExistingDirectory(cReader, ConfigReader.BAM_SORTED_DIRECTORY);
         File scriptDir = BioLockJUtils.requireExistingDirectory(cReader, ConfigReader.SCRIPTS_DIRECTORY);
@@ -78,7 +78,7 @@ public class RunBowtieOnDirectory extends BioLockJExecutor
 
                 BufferedWriter writer = new BufferedWriter(new FileWriter(script));
 
-                File outFile = new File( bamSortedDir+ File.separator + fastqFile.getName() + "_sorted.bam");
+                File outFile = new File( bamSortedDir+ File.separator + fastqFile.getName().replace("_1.fastq","") + "_sorted.bam");
 
 
 

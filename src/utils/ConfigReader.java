@@ -61,8 +61,8 @@ public class ConfigReader
 	public static final String REF_GENOME_DIRECTORY = "REF_GENOME_DIRECTORY";
 	public static final String BAM_SORTED_DIRECTORY = "BAM_SORTED_DIRECTORY";
 	public static final String SCRIPTS_DIRECTORY = "SCRIPTS_DIRECTORY";
-	public static final String BOWTIE2_BINARY = "BOWTIE2_BINARY";
-	public static final String SAMTOOLS_BINARY = "SAMTOOLS_BINARY";
+	public static final String BOWTIE2_DIRECTORY = "BOWTIE2_DIRECTORY";
+	public static final String SAMTOOLS_DIRECTORY = "SAMTOOLS_DIRECTORY";
 	public static final String REF_SEQUENCE = "REF_SEQUENCE";
 	public static final String BCF_DIRECTORY = "BCF_DIRECTORY";
 	public static final String VCF_DIRECTORY = "VCF_DIRECTORY";
