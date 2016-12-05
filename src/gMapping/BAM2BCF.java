@@ -78,8 +78,8 @@ public class BAM2BCF extends BioLockJExecutor{
                 File outFilebcf = new File( bcfDir+ File.separator + bamFile.getName().replace("_1.fastq_sorted.bam","") + ".bcf");
                 File outFilevcf = new File( vcfDir+ File.separator + bamFile.getName().replace("_1.fastq_sorted.bam","") + ".vcf");
 
-                writer.write(samtoolsPath + "samtools mpileup -uf " + refSeq +" "+ bamSortedDir + " | " +
-                       bcftoolsPath + " bcftools call --ploidy 1 -mv >  " + outFilebcf +"\n");
+                writer.write(samtoolsPath + "samtools mpileup -uf " + refSeq +" "+ bamFile + " | " +
+                       bcftoolsPath + "bcftools call --ploidy 1 -mv > " + outFilebcf +"\n");
                 writer.write(bcftoolsPath + "bcftools view " + outFilebcf + " > " + outFilevcf);
 
                 File touchFile = new File(script.getAbsolutePath() + FINISHED_SUFFIX );
