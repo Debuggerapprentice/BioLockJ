@@ -2,7 +2,6 @@
 ##RUN_BIOLOCK_J gMapping.RunBowtieOnDirectory
 ##RUN_BIOLOCK_J gMapping.BAM2BCF
 #RUN_BIOLOCK_J gMapping.GzipAllVCF
-##RUN_BIOLOCK_J gMapping.MergeAllVCF
 
 # executed before running script files on the cluster
 CHMOD_STRING = chmod 744
